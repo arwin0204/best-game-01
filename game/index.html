@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUMEN BLOOM — a neon garden defence</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #070b1e;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap { text-align: center; }
+  canvas {
+    display: block;
+    width: min(96vw, 960px);
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 42px rgba(125, 255, 212, 0.16), 0 18px 48px rgba(0, 0, 0, 0.55);
+    cursor: crosshair;
+    background: #070b1e;
+  }
+  .hint {
+    color: #8fa3c8;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <canvas id="game" width="960" height="600"></canvas>
+    <div class="hint">WASD / arrows to fly &middot; mouse to aim &middot; click or Space to fire &middot; P pause &middot; M mute &middot; R restart</div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
